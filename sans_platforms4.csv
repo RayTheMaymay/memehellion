@@ -2,8 +2,8 @@
 0,HeartTeleport,307,376,,,,,
 0,HeartMode,1,,,,,,
 0,TLPause,,,,,,,
-0,Platform,130,336,41,0,100,1,
-0,HeartTeleport,162,327,,,,,
+0,Platform,130,336,50,0,85,1,
+0,HeartTeleport,170,327,,,,,
 0,BoneVRepeat,515,356,40,0,60,100,15
 0,BoneVRepeat,210,356,40,1,120,20,85
 0,BoneVRepeat,270,267,40,3,90,20,85
