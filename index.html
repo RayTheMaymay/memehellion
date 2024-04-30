@@ -39,7 +39,7 @@
 		}
     </style>
 
-<!-- JavaScript to detect if in an iframe and reload with a cache-busting parameter -->
+    <!-- JavaScript to detect if in an iframe and reload with a cache-busting parameter -->
     <script>
     if (window.self !== window.top) {
         const newUrl = window.location.href.split("?")[0] + "?cb=" + Date.now(); // Add a cache-busting parameter
