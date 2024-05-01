@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+    (function() {
+        // Cache-busting with a unique query parameter
+        var currentUrl = window.location.href;
+        var timestamp = new Date().getTime(); // Get current timestamp
+        var newUrl;
+
+        // Check if there's already a query parameter
+        if (currentUrl.indexOf('?') > -1) {
+            newUrl = currentUrl + '&t=' + timestamp;
+        } else {
+            newUrl = currentUrl + '?t=' + timestamp;
+        }
+
+        // If the URL doesn't already contain the cache-busting parameter, reload with it
+        if (currentUrl !== newUrl) {
+            window.location.replace(newUrl);
+        }
+    })();
+</script>
+
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Was it really worth it?</title>
