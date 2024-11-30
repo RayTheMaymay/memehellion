@@ -1,42 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<script>
-    (function() {
-        // Generate a unique cache-busting query parameter
-        var timestamp = new Date().getTime(); // Current timestamp
-
-        // Cache-busting function for script and link tags
-        function addCacheBusting(url) {
-            // If a query parameter already exists, append the cache-busting parameter
-            if (url.indexOf('?') > -1) {
-                return url + '&t=' + timestamp;
-            } else {
-                // If no query parameter, add the cache-busting parameter
-                return url + '?t=' + timestamp;
-            }
-        }
-
-        // Select all script and link tags
-        var scripts = document.querySelectorAll('script[src]');
-        var links = document.querySelectorAll('link[href]');
-
-        // Update each script and link tag to include the cache-busting parameter
-        scripts.forEach(function(script) {
-            script.src = addCacheBusting(script.src);
-        });
-
-        links.for each(function(link) {
-            link.href = addCacheBusting(link.href);
-        });
-    })();
-</script>
-
-
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Was it really worth it?</title>
-	<meta name="description" content="To kill innocents, just to steal their memes... It sickens me.">
+	<title>Was it really worth it</title>
 	
 	<!-- Standardised web app manifest -->
 	<link rel="manifest" href="appmanifest.json" />
@@ -71,35 +38,11 @@
 			-ms-touch-action: none;
 		}
     </style>
-
+	
 
 </head> 
  
 <body> 
-
-	    <!-- Register a service worker that clears the cache -->
-    <script>
-        function clearCache() {
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                    for (var registration of registrations) {
-                        registration.unregister().then(() => {
-                            caches.keys().then(function (cacheNames) {
-                                return Promise.all(
-                                    cacheNames.map(function (cacheName) {
-                                        return caches.delete(cacheName);
-                                    })
-                                );
-                            });
-                        });
-                    }
-                });
-            }
-        
-        }
-        <script>
-        clearCache(); // Clear cache when entering the page
-	    
 	<div id="fb-root"></div>
 	
 	<script>
